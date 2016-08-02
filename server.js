@@ -20,9 +20,6 @@ var loader = require('./Buy2Loader');
 //
 var app = express();
 
-// expose the entire directory of client
-app.use(express.static(path.resolve(__dirname, 'client')));
-
 app.get('/Database',function(req,res) {
   MongoClient.connect(url,function(err,db){
     assert.equal(null,err);
